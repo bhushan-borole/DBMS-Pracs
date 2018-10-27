@@ -13,14 +13,13 @@ John              101
 Bill              154
 David             183
 
-2) select branch from student;
+2) select distinct branch from student;
 
 BRANCH
 ------
-CMPN
+EXTC
 INFT
 CMPN
-EXTC
 
 
 3) select name from student where branch != 'CMPN';
