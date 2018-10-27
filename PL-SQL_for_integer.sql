@@ -1,4 +1,4 @@
-Pl-SQL code:
+--Pl-SQL code:
 	DECLARE
 		i number;
 	BEGIN
@@ -13,7 +13,7 @@ Pl-SQL code:
 	END;
 
 
-
+/*
 SQL> DECLARE
   2  i number;
   3  BEGIN
@@ -30,3 +30,4 @@ SQL> DECLARE
 250
 
 PL/SQL procedure successfully completed.
+*/

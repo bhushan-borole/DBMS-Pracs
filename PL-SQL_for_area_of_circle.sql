@@ -1,6 +1,6 @@
-create table circle(radius number, area float);
+--create table circle(radius number, area float);
 
-PL-SQL CODE: 
+--PL-SQL CODE: 
 
 	BEGIN
 		FOR i in 3 .. 7 LOOP
@@ -10,7 +10,7 @@ PL-SQL CODE:
 	END;
 
 
-
+/*
 SQL> BEGIN
   2  FOR i in 3 .. 7 LOOP
   3  INSERT INTO circle(radius, area) VALUES (i, 3.14*i*i);
@@ -35,3 +35,4 @@ SQL> select * from circle;
          5       78.5
          6     113.04
          7     153.86
+*/
