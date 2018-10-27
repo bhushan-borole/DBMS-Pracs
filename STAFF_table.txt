@@ -7,7 +7,9 @@ insert into staff values('David', 4, 'SYDNEY', 3, '04-Jun-2006', 20000);
 insert into staff values('Nancy', 5, 'BELGIUM', 1, '18-Mar-2008', 13000);
 insert into staff values('Smith', 6, 'DELHI', 4, '06-Nov-2007', 16000);
 
-1) select count(name), dept from staff group by dept;
+1) List the number of employees in each Dept:
+
+select count(name), dept from staff group by dept;
 
 COUNT(NAME)       DEPT
 ----------- ----------
@@ -15,21 +17,28 @@ COUNT(NAME)       DEPT
           1          4
           2          3
 
-2) select avg(salary) from staff group by dept having count(name) > 2;
+2) Average salary of those Depts having more than 2 employees: 
+
+select avg(salary) from staff group by dept having count(name) > 2;
 
 AVG(SALARY)
 -----------
  15666.6667
 
 
-3) select sum(salary) from staff where salary >= 16000;
+3) The sum of salaries of employees drawing greater than or equal to 16000:
+
+select sum(salary) from staff where salary >= 16000;
 
 SUM(SALARY)
 -----------
       70000
 
 
-4) select * from staff where salary > (select min(salary) from staff where dept=1);
+4) Find out all the employees who have salary greater than at least one employee in the
+department 1 :
+
+select * from staff where salary > (select min(salary) from staff where dept=1);
 
 NAME               ID ADDRESS          DEPT DOJ           SALARY
 ---------- ---------- ---------- ---------- --------- ----------
@@ -40,7 +49,9 @@ David               4 SYDNEY              3 04-JUN-06      20000
 Smith               6 DELHI               4 06-NOV-07      16000
 
 
-5) create view StaffView as select * from staff where dept=1 or dept=2;
+5) Create a view StaffView having employees who belong to department number 1 or 2: 
+
+create view StaffView as select * from staff where dept=1 or dept=2;
 
 View created.
 
