@@ -1,0 +1,7 @@
+create table student(name varchar(10), id number, branch varchar(6), sem number, result number, dob date);
+insert into STUDENT values('John', 101, 'CMPN', 4, 65, '03-Dec-88');
+insert into STUDENT values('Bill', 154, 'INFT', 6, 72, '04-Nov-87');
+insert into STUDENT values('Mary', 162, 'CMPN', 6, 58, '05-Jul-87');
+insert into STUDENT values('David', 183, 'EXTC', 6, 65, '25-Oct-88');
+
+
